@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+[class*='l-'] {
+  padding: 6px;
+  margin: 6px;
+  border: 2px solid ;
+}
+
+.l-0 {
+  border-color: blue;
+}
+
+.l-1 {
+  border-color: red;
+}
+
+.l-2 {
+  border-color: green;
+}
+
+.l-3 {
+  border-color: orange;
+}
+
+.l-4 {
+  border-color: magenta;
+}
