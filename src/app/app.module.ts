@@ -1,28 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ConfigPageComponent } from './config-page/config-page.component';
-import { ConfigItemComponent } from './config-page/config-item/config-item.component';
-import { DashboardItemComponent } from './dashboard/dashboard-item/dashboard-item.component';
+import {AppComponent} from './app.component';
+
+import {AnalyticModule} from './analytic/analytic.module';
+import {DashboardModule} from './dashboard/dashboard.module';
+import {SettingsAnalyticsModule} from './settings-analytics/settings-analytics.module';
+import {SettingsGeneralModule} from './settings-general/settings-general.module';
+import {AppRoutingModule}     from './app-routing.module';
+import {AnalyticsService} from './core/analytics.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    ConfigPageComponent,
-    ConfigItemComponent,
-    DashboardItemComponent
+    AppComponent
   ],
   imports: [
+    AnalyticModule,
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DashboardModule,
+    SettingsAnalyticsModule,
+    SettingsGeneralModule
   ],
-  providers: [],
+  providers: [
+    AnalyticsService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

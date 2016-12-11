@@ -1,10 +1,40 @@
-<div class="l-0">
-  <h1>
-    {{title}}
-  </h1>
-  <div>
-    'app' component (l-0)
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-1 no-float">
+
+      <div class="top-links">
+        <nav>
+          <a *ngFor="let link of topLinks"
+             [routerLink]=[link.url]
+             [routerLinkActive]="['active']">
+            {{link.title}}
+          </a>
+          <a *ngFor="let analytic of enabledAnalytics"
+             [routerLink]="['/analytic', analytic.id]"
+             [routerLinkActive]="['active']">
+            {{analytic.name}}
+          </a>
+        </nav>
+      </div>
+
+      <div class="bottom-links">
+        <nav>
+          <a *ngFor="let link of bottomLinks"
+             [routerLink]=[link.url]
+             [routerLinkActive]="['active']">
+            {{link.title}}
+          </a>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="col-xs-11 no-float">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
   </div>
-  <app-dashboard></app-dashboard>
-  <app-config-page></app-config-page>
 </div>
