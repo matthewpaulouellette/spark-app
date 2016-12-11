@@ -11,6 +11,7 @@ import {SettingsAnalyticsModule} from './settings-analytics/settings-analytics.m
 import {SettingsGeneralModule} from './settings-general/settings-general.module';
 import {AppRoutingModule}     from './app-routing.module';
 import {CoreModule} from './core/core.module';
+import {AnalyticsService} from './core/analytics.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {CoreModule} from './core/core.module';
     SettingsAnalyticsModule,
     SettingsGeneralModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [AnalyticsService]
 })
 export class AppModule {
 }

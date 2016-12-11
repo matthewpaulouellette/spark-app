@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Link} from './link';
 import {AnalyticsService} from './core/analytics.service';
 import {Analytic} from './core/analytic';
@@ -9,7 +9,8 @@ import {Analytic} from './core/analytic';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  enabledAnalytics: Analytic[];
   title = '\'app\' title from app.component.ts';
   topLinks: Link[] = [
     {url: '/dashboard', title: 'Dashboard (Home)'}
@@ -18,7 +19,6 @@ export class AppComponent {
     {url: '/settings-analytics', title: 'Analytic Settings'},
     {url: '/settings-general', title: 'General Settings'}
   ];
-  enabledAnalytics: Analytic[];
 
   constructor(private analyticsService: AnalyticsService) {
   }

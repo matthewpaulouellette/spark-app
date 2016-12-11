@@ -2,6 +2,7 @@
   <h1>
     'settings-analytic' component
   </h1>
+  <button (click)="addAnalytic()">Add new Analytic</button>
   <app-entry *ngFor="let analytic of allAnalytics"
              [analytic]="analytic">
   </app-entry>

@@ -1,7 +1,8 @@
 <div class="L-1">
-  <p>
+  <h1>
     'dashboard' component
-  </p>
-  <app-entry></app-entry>
-  <app-entry></app-entry>
+  </h1>
+  <app-entry *ngFor="let analytic of enabledAnalytics"
+             [analytic]="analytic">
+  </app-entry>
 </div>
