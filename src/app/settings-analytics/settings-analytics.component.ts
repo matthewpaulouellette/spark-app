@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Analytic} from '../core/analytic';
+import {AnalyticsService} from '../core/analytics.service';
 
 @Component({
   selector: 'app-settings-analytics',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings-analytics.component.css']
 })
 export class SettingsAnalyticsComponent implements OnInit {
+  allAnalytics: Analytic[];
 
-  constructor() { }
+  constructor(private analyticsService: AnalyticsService) {
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getAllAnalytics();
+  }
+
+  getAllAnalytics(): void {
+    this.analyticsService.getAllAnalytics().then(allAnalytics => this.allAnalytics = allAnalytics);
   }
 
 }

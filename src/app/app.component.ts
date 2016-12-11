@@ -12,7 +12,7 @@ import {Analytic} from './core/analytic';
 export class AppComponent {
   title = '\'app\' title from app.component.ts';
   topLinks: Link[] = [
-    {url: '/dashboard', title: 'Dashboard'}
+    {url: '/dashboard', title: 'Dashboard (Home)'}
   ];
   bottomLinks: Link[] = [
     {url: '/settings-analytics', title: 'Analytic Settings'},

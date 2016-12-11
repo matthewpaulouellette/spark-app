@@ -25,30 +25,31 @@ html, body, .container {
 .row .no-float {
   display: table-cell;
   float: none;
+  padding-left: 0px;
 }
 
-[class*='l-'] {
-  //padding: 6px;
-  //margin: 6px;
+[class*='L-'] {
+  padding: 6px;
+  margin: 6px;
   border: 2px solid ;
 }
 
-.l-0 {
+.L-0 {
   border-color: blue;
 }
 
-.l-1 {
+.L-1 {
   border-color: red;
 }
 
-.l-2 {
+.L-2 {
   border-color: green;
 }
 
-.l-3 {
+.L-3 {
   border-color: orange;
 }
 
-.l-4 {
+.L-4 {
   border-color: magenta;
 }

@@ -7,7 +7,6 @@ import {ANALYTICS} from './mock-analytics';
 export class AnalyticsService {
 
   getEnabledAnalytics(): Promise<Analytic[]> {
-
     let ret = [];
     for (let entry of ANALYTICS) {
       if (entry.enabled == true) {

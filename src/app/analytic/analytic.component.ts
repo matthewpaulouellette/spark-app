@@ -1,10 +1,10 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import {AnalyticsService} from '../core/analytics.service';
 
 import 'rxjs/add/operator/switchMap';
 
 import {Analytic} from "../core/analytic";
-import {AnalyticsService} from '../core/analytics.service';
 
 @Component({
   selector: 'app-analytic',

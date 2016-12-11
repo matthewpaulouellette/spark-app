@@ -1,5 +1,13 @@
-<div class="l-2">
-  <p>
-    'config-item' component (l-2)
-  </p>
+<div *ngIf="analytic" class="L-2">
+  <div class="container">
+    <div class="row">
+      Name : {{analytic.name}}
+    </div>
+    <div class="row">
+      id : {{analytic.id}}
+    </div>
+    <div class="row">
+      type : {{analytic.type}}
+    </div>
+  </div>
 </div>

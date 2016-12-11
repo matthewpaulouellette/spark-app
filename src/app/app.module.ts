@@ -10,7 +10,7 @@ import {DashboardModule} from './dashboard/dashboard.module';
 import {SettingsAnalyticsModule} from './settings-analytics/settings-analytics.module';
 import {SettingsGeneralModule} from './settings-general/settings-general.module';
 import {AppRoutingModule}     from './app-routing.module';
-import {AnalyticsService} from './core/analytics.service';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,14 +20,12 @@ import {AnalyticsService} from './core/analytics.service';
     AnalyticModule,
     AppRoutingModule,
     BrowserModule,
+    CoreModule,
     FormsModule,
     HttpModule,
     DashboardModule,
     SettingsAnalyticsModule,
     SettingsGeneralModule
-  ],
-  providers: [
-    AnalyticsService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,8 +1,8 @@
-<div class="l-1">
-  <p>
-    'config-page' component (l-1)
-  </p>
-  <app-entry></app-entry>
-  <app-entry></app-entry>
-  <app-entry></app-entry>
+<div class="L-1">
+  <h1>
+    'settings-analytic' component
+  </h1>
+  <app-entry *ngFor="let analytic of allAnalytics"
+             [analytic]="analytic">
+  </app-entry>
 </div>

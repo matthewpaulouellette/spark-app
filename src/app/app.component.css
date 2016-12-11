@@ -1,15 +1,28 @@
+.top-links {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0px;
+}
+
 .bottom-links {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
+  width: 100%;
+  left: 0px;
+}
+
+.navigation {
+  border-right: 5px solid #13234f;
 }
 
 nav a {
   padding: 5px 10px;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 5px;
   display: block;
   background-color: #eee;
-  border-radius: 4px;
 }
 
 nav a:visited, a:link {
