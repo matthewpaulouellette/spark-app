@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Link} from './link';
-import {AnalyticsService} from './core/analytics.service';
 import {Analytic} from './core/analytic';
-
+import {AnalyticsService} from './core/analytics.service';
 
 @Component({
   selector: 'app-root',

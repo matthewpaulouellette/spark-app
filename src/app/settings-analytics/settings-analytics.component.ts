@@ -19,6 +19,7 @@ export class SettingsAnalyticsComponent implements OnInit {
 
   getAllAnalytics(): void {
     this.analyticsService.getAllAnalytics().then(allAnalytics => this.allAnalytics = allAnalytics);
+    console.log('settings-analytics.getAllAnalytics')
   }
 
   addAnalytic(name: string, type: string): void {
