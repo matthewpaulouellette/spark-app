@@ -46,25 +46,25 @@ export class AnalyticsService {
   }
 
 
-
-
-
-  sampleGetMethod(): Promise<Analytic[]> {
-    return this.http.get('api/heroes')
-      .toPromise()
-      .then(response => response.json().data as Analytic[])
-      .catch(this.handleError);
-  }
-
-  private headers = new Headers({'Content-Type': 'application/json'});
-  update(hero: Hero): Promise<Hero> {
-    const url = `${this.heroesUrl}/${hero.id}`;
-    return this.http
-      .put(url, JSON.stringify(hero), {headers: this.headers})
-      .toPromise()
-      .then(() => hero)
-      .catch(this.handleError);
-  }
+  //
+  //
+  //
+  // sampleGetMethod(): Promise<Analytic[]> {
+  //   return this.http.get('api/heroes')
+  //     .toPromise()
+  //     .then(response => response.json().data as Analytic[])
+  //     .catch(this.handleError);
+  // }
+  //
+  // private headers = new Headers({'Content-Type': 'application/json'});
+  // update(hero: Hero): Promise<Hero> {
+  //   const url = `${this.heroesUrl}/${hero.id}`;
+  //   return this.http
+  //     .put(url, JSON.stringify(hero), {headers: this.headers})
+  //     .toPromise()
+  //     .then(() => hero)
+  //     .catch(this.handleError);
+  // }
 
 
 }
